@@ -1,9 +1,6 @@
 package wikipedia
 
-import org.apache.spark.SparkConf
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext._
-
+import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.rdd.RDD
 
 case class WikipediaArticle(title: String, text: String) {
@@ -25,15 +22,15 @@ object WikipediaRanking {
 
   // Hint: use a combination of `sc.textFile`, `WikipediaData.filePath` and `WikipediaData.parse`
   val wikiRdd: RDD[WikipediaArticle] = sc.textFile(WikipediaData.filePath).map(line =>
-          WikipediaData.parse(line)
+    WikipediaData.parse(line)
   )
 
 
   /** Returns the number of articles on which the language `lang` occurs.
-   *  Hint1: consider using method `aggregate` on RDD[T].
-   *  Hint2: consider using method `mentionsLanguage` on `WikipediaArticle`
-   */
-  def occurrencesOfLang(lang: String, rdd: RDD[WikipediaArticle]): Int = ???
+    * Hint1: consider using method `aggregate` on RDD[T].
+    * Hint2: consider using method `mentionsLanguage` on `WikipediaArticle`
+    */
+  def occurrencesOfLang(lang: String, rdd: RDD[WikipediaArticle]): Int = rdd.filter(wikipediaArticle => wikipediaArticle.text.contains(lang)).count().toInt
 
   /* (1) Use `occurrencesOfLang` to compute the ranking of the languages
    *     (`val langs`) by determining the number of Wikipedia articles that
@@ -87,6 +84,7 @@ object WikipediaRanking {
   }
 
   val timing = new StringBuffer
+
   def timed[T](label: String, code: => T): T = {
     val start = System.currentTimeMillis()
     val result = code
