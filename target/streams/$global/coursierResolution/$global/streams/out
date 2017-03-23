@@ -1,0 +1,22 @@
+coursier.ResolutionException: Encountered 2 error(s) in dependency resolution:
+  org.apache.spark:spark-core:2.1.0:
+    not found:
+      C:\Users\amita.shukla\.ivy2\local\org.apache.spark\spark-core\2.1.0\ivys\ivy.xml
+      https://repo1.maven.org/maven2/org/apache/spark/spark-core/2.1.0/spark-core-2.1.0.pom
+      https://oss.sonatype.org/content/repositories/releases/org/apache/spark/spark-core/2.1.0/spark-core-2.1.0.pom
+  org.apache.spark:spark-sql:2.1.0:
+    not found:
+      C:\Users\amita.shukla\.ivy2\local\org.apache.spark\spark-sql\2.1.0\ivys\ivy.xml
+      https://repo1.maven.org/maven2/org/apache/spark/spark-sql/2.1.0/spark-sql-2.1.0.pom
+      https://oss.sonatype.org/content/repositories/releases/org/apache/spark/spark-sql/2.1.0/spark-sql-2.1.0.pom
+[error] (*:coursierResolution) coursier.ResolutionException: Encountered 2 error(s) in dependency resolution:
+[error]   org.apache.spark:spark-core:2.1.0:
+[error]     not found:
+[error]       C:\Users\amita.shukla\.ivy2\local\org.apache.spark\spark-core\2.1.0\ivys\ivy.xml
+[error]       https://repo1.maven.org/maven2/org/apache/spark/spark-core/2.1.0/spark-core-2.1.0.pom
+[error]       https://oss.sonatype.org/content/repositories/releases/org/apache/spark/spark-core/2.1.0/spark-core-2.1.0.pom
+[error]   org.apache.spark:spark-sql:2.1.0:
+[error]     not found:
+[error]       C:\Users\amita.shukla\.ivy2\local\org.apache.spark\spark-sql\2.1.0\ivys\ivy.xml
+[error]       https://repo1.maven.org/maven2/org/apache/spark/spark-sql/2.1.0/spark-sql-2.1.0.pom
+[error]       https://oss.sonatype.org/content/repositories/releases/org/apache/spark/spark-sql/2.1.0/spark-sql-2.1.0.pom
