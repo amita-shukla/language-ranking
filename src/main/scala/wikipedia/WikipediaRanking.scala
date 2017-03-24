@@ -91,7 +91,7 @@ object WikipediaRanking {
       rdd.filter( wa => wa
         .text
         .contains(lang)
-      ).collect().toList)
+      ).count().toInt)
     )
 
   def main(args: Array[String]) {
